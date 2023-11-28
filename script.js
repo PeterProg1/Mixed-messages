@@ -1,11 +1,15 @@
-const generateRandomMessage = () => {
-
-let part1 = ['He', 'She', 'It']
-let part2 = ['is', 'was', 'will be']
-let part3 = ['good', 'bad', 'normal']
-
-return `${part1[Math.floor(Math.random() * 3)]} ${part2[Math.floor(Math.random() * 3)]} ${part3[Math.floor(Math.random() * 3)]}`
-
+const message = () => {
+    const myObj = {
+        key1: [1, 2, 3, 4],
+        key2: [5, 6, 7, 8],
+        key3: [9, 10, 11, 12]
+    };
+    let toPrint = [];
+    for (let index in myObj) {
+        const random = Math.floor(Math.random() * myObj[index].length);
+        toPrint.push(myObj[index][random])
+    }
+    console.log(toPrint)
 }
 
-console.log(generateRandomMessage());
+message();
